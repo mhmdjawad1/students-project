@@ -11,3 +11,15 @@ for name, grade in records:
     students[name] = students.get(name,[]) + [grade]
 
 print(students)
+  
+for name in students:
+    grades = students[name]
+    total = 0  
+    for grade in grades:
+        total += grade
+
+    average = total / len(grades)  
+    print("name:", name)
+    print("grades:", grades)
+    print("average:", round(average, 2))
+    
