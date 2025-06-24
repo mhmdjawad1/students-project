@@ -111,4 +111,7 @@ print("Overall class average:", round(average, 2))
 
 
 
+newgrades=[["Jana",99], ["Ziad",78], ["Layla",84]]
 
+for name, grade in newgrades:
+    class_journal[name] = class_journal.get(name, []) + [grade]
