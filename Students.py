@@ -95,3 +95,20 @@ print("Number of grades entered accross whole class:", total)
 
 
 
+total = 0
+count = 0
+
+for name in class_journal:
+    grades = class_journal[name]
+
+    for grade in grades:
+        total += grade
+        count += 1
+
+average = total / count
+print("Overall class average:", round(average, 2))
+ 
+
+
+
+
