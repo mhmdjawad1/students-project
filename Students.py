@@ -80,3 +80,18 @@ for name in class_journal:
             print("Students with at least one grade below 70 is :",name)
 
 
+
+
+
+total = 0
+
+for name in class_journal:
+    grades = class_journal[name]
+    for grade in grades:
+        total += 1
+
+print("Number of grades entered accross whole class:", total)
+
+
+
+
