@@ -26,6 +26,7 @@ for name in class_journal:
     print("average:", round(average, 2))
 
 
+
 top_name = ""
 top_average = 0
 
@@ -41,3 +42,33 @@ for name in class_journal:
         top_name = name
 
 print("The highest average in class is for",top_name,":",int(round(top_average,2)))
+
+
+
+most_consistent_student = ""
+smallest_difference = 2000
+
+for name in class_journal:
+    grades = class_journal[name]
+
+
+    max_grade = grades[0]
+    min_grade = grades[0]
+
+    for grade in grades:
+        if grade > max_grade:
+            max_grade = grade
+        if grade < min_grade:
+            min_grade = grade
+
+    difference = max_grade - min_grade
+
+    if difference < smallest_difference:
+        smallest_difference = difference
+        most_consistent_student= name
+
+print("Most consistent student is", most_consistent_student,"for differnce",smallest_difference)
+
+
+
+
