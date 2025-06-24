@@ -3,23 +3,41 @@ records = [
     ["Ziad", 62], ["Jana", 97], ["Tariq", 73], ["Ziad", 71], ["Layla", 86],
     ["Jana", 94], ["Ziad", 75]
 ]
-students = {}
 
+class_journal = {}
 
 
 for name, grade in records:
-    students[name] = students.get(name,[]) + [grade]
+    class_journal[name] = class_journal.get(name, []) + [grade]
 
-print(students)
-  
-for name in students:
-    grades = students[name]
-    total = 0  
+print(class_journal)
+
+
+
+for name in class_journal:
+    grades = class_journal[name]
+    total = 0
     for grade in grades:
         total += grade
+    average = total / len(grades)
 
-    average = total / len(grades)  
     print("name:", name)
     print("grades:", grades)
     print("average:", round(average, 2))
-    
+
+
+top_name = ""
+top_average = 0
+
+for name in class_journal:
+    grades = class_journal[name]
+    total = 0
+    for grade in grades:
+        total += grade
+    average = total / len(grades)
+
+    if average > top_average:
+        top_average = average
+        top_name = name
+
+print("The highest average in class is for",top_name,":",int(round(top_average,2)))
