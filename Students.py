@@ -72,3 +72,11 @@ print("Most consistent student is", most_consistent_student,"for differnce",smal
 
 
 
+for name in class_journal:
+    grades = class_journal[name]
+
+    for grade in grades:
+        if grade < 70:
+            print("Students with at least one grade below 70 is :",name)
+
+
